@@ -27,7 +27,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :gender, presence: true
-  validates :self_introduction, length: { maximu: 500 }
+  validates :self_introduction, length: { maximum: 500 }
 
   enum gender: { man: 0, woman: 1 }
 end
