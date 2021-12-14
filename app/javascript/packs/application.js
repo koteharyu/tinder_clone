@@ -11,6 +11,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "../src/avatar_upload"
+import '../src/swipe';
 
 Rails.start()
 Turbolinks.start()
