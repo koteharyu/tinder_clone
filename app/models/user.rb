@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id                     :bigint           not null, primary key
+#  avatar                 :string
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  gender                 :integer          default("man"), not null
@@ -28,6 +29,8 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :gender, presence: true
   validates :self_introduction, length: { maximum: 500 }
+
+  mount_uploader :avatar, AvatarUploader
 
   enum gender: { man: 0, woman: 1 }
 
