@@ -1,9 +1,9 @@
 .jumbotron
   .container
     .navbar.navbar-light
-      = link_to 'Tinder Clone', '#', class: 'navbar-brand text-white'
-      .navbar.sign-in-btn
-        = link_to 'ログイン', '#', class: 'btn my-2 my-sm-0 bg-light text-top-color'
+      = link_to 'Tinder Clone', root_path, class: 'navbar-brand text-white'
+      .navbar__sign-in-btn
+        = link_to 'ログイン', new_user_session_path, class: 'btn my-2 my-sm-0 bg-light text-top-color'
 
   .top-title
     h1.text-white.text-center
@@ -11,6 +11,6 @@
 
   .top-authentication.text-center
     .top-authentication__sign-up-btn.m-3
-      = link_to 'アカウントを作成する', '#', class: 'btn text-white'
+      = link_to 'アカウントを作成する', new_user_registration_path, class: 'btn text-white'
     .top-authentication__sign-in-btn.m-3
-      = link_to 'ログイン', '#', class: 'btn text-white'
+      = link_to 'ログイン', new_user_session_path, class: 'btn text-white'
