@@ -1,7 +1,10 @@
 .user-show-page
   = render 'shared/navbar'
   .profile.mt-4
-    .profile-default-img
+    - if @user.avatar.url.nil?
+      .profile-default-img
+    - else
+      = image_tag @user.avatar.url, class: 'profile-img'
 
     .profile-name.mt-4
       = @user.name
