@@ -5,6 +5,11 @@
 
     .profile-name.mt-4
       = @user.name
+    .profile-text
+      - if @user.self_introduction.present?
+        = simple_format(@user.self_introduction)
+      - else
+        | 自己紹介...
 
   - if current_user.id == @user.id
     .user-action
