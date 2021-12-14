@@ -1,0 +1,23 @@
+.user-index-page
+  = render 'shared/navbar'
+
+  .swipe
+    .swipe--status
+      i.fa.fa-times
+      i.fa.fa-heart
+    .swipe--cards
+      - @users.each do |user|
+        .swipe--card id="#{user.id}"
+          - if user.avatar.url.nil?
+            .profile-default-img
+          - else
+            = image_tag user.avatar.url, class: 'profile-img'
+          p.profile-name
+            = user.name
+      .no-user
+        | 近くにお相手がいません
+    .swipe--buttons
+      button#dislike
+        i.fas.fa-times.fa-2x
+      button#like
+        i.fas.fa-heart.fa-2x
