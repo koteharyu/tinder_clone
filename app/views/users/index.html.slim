@@ -7,14 +7,6 @@
       i.fa.fa-heart
     .swipe--cards
       = render @users
-      / - @users.each do |user|
-      /   .swipe--card id="#{user.id}"
-      /     - if user.avatar.url.nil?
-      /       .profile-default-img
-      /     - else
-      /       = image_tag user.avatar.url, class: 'profile-img'
-      /     p.profile-name
-      /       = user.name
       .no-user
         | 近くにお相手がいません
     .swipe--buttons
