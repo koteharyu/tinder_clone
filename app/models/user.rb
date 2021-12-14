@@ -30,6 +30,8 @@ class User < ApplicationRecord
   validates :gender, presence: true
   validates :self_introduction, length: { maximum: 500 }
 
+  mount_uploader :avatar, AvatarUploader
+
   enum gender: { man: 0, woman: 1 }
 
   def update_witout_current_password(params, *options)
