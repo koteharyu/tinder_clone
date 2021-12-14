@@ -9,7 +9,7 @@
   - if current_user.id == @user.id
     .user-action
       .user-action-common
-        = link_to '#' do
+        = link_to destroy_user_session_path, method: :delete do
           i.fas.fa-sign-out-alt.fa-2x
         span ログアウト
       .user-action-common
