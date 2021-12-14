@@ -22,11 +22,11 @@
     </div>
 
     <div class="form-group">
-      <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "パスワード" %>
+      <%= f.hidden_field :password, autocomplete: "new-password", class: "form-control", placeholder: "パスワード" %>
     </div>
 
     <div class="form-group">
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "パスワードの確認" %>
+      <%= f.hidden_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "パスワードの確認" %>
     </div>
 
     <div class="user-edit__submit-btn">
