@@ -5,11 +5,12 @@
 #  id                     :bigint           not null, primary key
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
-#  gender                 :integer          default(0), not null
+#  gender                 :integer          default("man"), not null
 #  name                   :string           not null
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
+#  self_introduction      :text
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
@@ -26,6 +27,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :gender, presence: true
+  validates :self_introduction, length: { maximu: 500 }
 
   enum gender: { man: 0, woman: 1 }
 end
