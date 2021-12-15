@@ -1,0 +1,7 @@
+.swipe--card id="#{user.id}"
+  - if user.avatar.url.nil?
+    .profile-default-img
+  - else
+    = image_tag user.avatar.url, class: 'profile-img'
+  p.profile-name
+    = user.name
