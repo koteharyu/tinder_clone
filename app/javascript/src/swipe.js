@@ -80,7 +80,7 @@ if(location.pathname == '/users') {
         }
       })
       .done(function() {
-        console.log("done")
+        console.log(`${reaction}`)
       })
     }
 
@@ -92,6 +92,11 @@ if(location.pathname == '/users') {
       let moveOutWidth = document.body.clientWidth * 2;
 
       let card = cards[0];
+
+      let user_id = card.id;
+
+      postReaction(user_id, reaction)
+
       card.classList.add('removed')
 
       if (reaction == "like") {
