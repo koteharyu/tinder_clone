@@ -1,0 +1,17 @@
+.matching-index-page
+  = render 'shared/navbar'
+  .matching
+    p.matching-title.ml-3
+      | メッセージ
+    p.matching-num
+      | マッチングした人数: #{@match_users.count} 人
+    .matching__list
+      - if @match_users.present?
+        - @match_users.each do |user|
+          .matching__person
+            - if user.avatar.url.nil?
+              .matching__person-default-img
+            - else
+              = image_tag user.avatar.url, class: 'matching__person-img'
+            .matching__person-name
+              = user.name
